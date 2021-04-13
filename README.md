@@ -1,1 +1,4 @@
-# Magang-IRIS-
+# Rangkuman Pembelajaran Pointer 
+
+Apa itu pointer :
+
