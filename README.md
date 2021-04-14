@@ -7,7 +7,7 @@ Apa itu pointer ?
 
 ## pengertian pointer
 
-Pointer bisa dikatakan sebagai sebuah variabel atau object yang menunjuk ke variabel atau object lainnya.Jadi pointer tidak berisi nilai data, melainkan berisi suatu alamat memori. Lokasi memori tersebut bisa diwakili sebuah variabel atau juga berupa alamat memori secara langsung.
+Pointer bisa dikatakan sebagai sebuah variabel atau object yang menunjuk ke variabel atau object lainnya.
 
 
 ![reference_operator](https://user-images.githubusercontent.com/82454139/114793048-bc5f4880-9db3-11eb-80cf-fea45df88e8b.png)
@@ -52,4 +52,6 @@ Pada program tersebut, kita menggunakan simbol & untuk mengambil alamat memori d
 * OUTPUTNYA :
 
 ![image](https://user-images.githubusercontent.com/82454139/114793841-74d9bc00-9db5-11eb-98e5-8747c03a5622.png)
+
+Dapat dikatakan kalau pointer tidak berisi nilai data, melainkan berisi suatu alamat memori. Lokasi memori tersebut bisa diwakili sebuah variabel atau juga berupa alamat memori secara langsung.
 
