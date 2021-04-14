@@ -19,9 +19,10 @@ a. Operator Deference (&)
 Operator ini biasanya disebut dengan address of atau operator alamat. Dengan menggunakan operator deference (&) ini, suatu variabel akan menghasilkan alamat memori.
 
 Contoh:
-
+'''
 int x = 43;
 cout << &x;
+'''
 Pada program di atas, akan ditampilkan alamat memori dari variabel x, bukan nilai x.
 
 b. Operator reference (*)
