@@ -5,7 +5,7 @@ Apa itu pointer ?
 
 ![pointers](https://user-images.githubusercontent.com/82454139/114570668-3a322f80-9ca0-11eb-8ae0-e3d84bc199b3.png)
 
-## penngertian pointer
+## pengertian pointer
 
 Pointer bisa dikatakan sebagai sebuah variabel atau object yang menunjuk ke variabel atau object lainnya.Jadi pointer tidak berisi nilai data, melainkan berisi suatu alamat memori. Lokasi memori tersebut bisa diwakili sebuah variabel atau juga berupa alamat memori secara langsung.
 
@@ -33,3 +33,23 @@ Contoh:
 int x = 76;
 cout <<*&x;
 ```
+#### Contoh penerapan pointers 
+```
+#include <stdio.h>
+
+void main () {
+
+   int  a;
+   char b[10];
+
+   printf("Alamat memori variabel a: %x\n", &a);
+   printf("Alamat memori variabel b: %x\n", &b);
+
+}
+```
+
+Pada program tersebut, kita menggunakan simbol & untuk mengambil alamat memori dari variabel a dan b. Lalu menggunakan format specifier %x untuk menampilkannya dalam bilangan heksadesimal.
+* OUTPUTNYA :
+
+![image](https://user-images.githubusercontent.com/82454139/114793841-74d9bc00-9db5-11eb-98e5-8747c03a5622.png)
+
