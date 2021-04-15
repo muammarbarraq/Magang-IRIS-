@@ -20,10 +20,6 @@ Operator ini biasanya disebut dengan address of atau operator alamat. Dengan men
 
 Contoh:
 ```
-int x = 43;
-cout << &x;
-```
-```
 #include <iostream>
 
 using namespace std;
@@ -48,10 +44,6 @@ Nilai yang ditunjuk pointer *angkax : 90
 ```
 ![image](https://user-images.githubusercontent.com/82454139/114815299-21309800-9de0-11eb-913c-75f13c70679b.png)
 
-
-https://1.bp.blogspot.com/-r0Qzgd3sCRA/WDxJeVqXYXI/AAAAAAAAAHU/qbJwq8ciKTQl1E2AtaPA5FFDyr-kaKDZQCLcB/s640/Contoh%2BPenggunaan%2BOperator%2BDereference%2B%2528%2526%2529.PN
-
-
 Pada program di atas, akan ditampilkan alamat memori dari variabel x, bukan nilai x.
 
 ### b. Operator reference (*)
@@ -59,9 +51,54 @@ Operator ini biasanya disebut value pointed by. Dengan menggunakan operator ini,
 
 Contoh:
 ```
-int x = 76;
-cout <<*&x;
+#include <iostream>
+
+using namespace std;
+
+int main(){
+
+     
+     int x;
+     int *p;
+     x = 20;
+     p = &x;
+      cout<<"\t\t===== Program Contoh Pointer =====\n\n";
+
+     cout<<"Nilai X   : "<<x<<endl;
+     cout<<"Alamat X (&X) : "<<&x<<endl<<endl;
+
+     cout<<"Nilai yang ditunjuk *p: "<<*p<<endl;
+     cout<<"Alamat yang ditunjuk *P: "<<p<<endl;
+     cout<<"Alamat *P (&P) : "<<&p<<endl;
+      *p = 30;
+
+     cout<<"\n\n\nNilai X   : "<<x<<endl;
+     cout<<"Alamat X (&X) : "<<&x<<endl<<endl;
+
+     cout<<"Nilai yang ditunjuk *P: "<<*p<<endl;
+     cout<<"Alamat yang ditunjuk *P: "<<p<<endl;
+     cout<<"Alamat *P (&P) : "<<&p<<endl;
+
+     return 0;
+}
 ```
+*OUTPUT
+```
+Nilai X   : 20 
+Alamat X (&X) : 06ffe3c  
+Nilai yang ditunjuk *p: 20
+Alamat yang ditunjuk *P: 06ffe3c
+Alamat *P (&P) : 06ffe30
+
+Nilai X   : 30
+Alamat X (&X) : 06ffe3c
+
+Nilai yang ditunjuk *P: 30
+Alamat yang ditunjuk *P: 06ffe3c
+Alamat *P (&P) : 06ffe30
+```
+Pada program diatas awalnya kita membuat variabel dengan tipe data int dengan nama "x", kemudian sebuah pointer dengan tipe data int dengan nama "p". setelah itu memberikan nilai x dengan nilai "20" kemudian mengarahkan / mengisi / menunjukkan pointer p ke alamat memori variabel x. setelah itu menampilkan data dari variabel x dan pointer p.Kemudian code *p = 30; memiliki arti bahwa kita akan mengisi nilai 30 kedalam pointer p / alamat yang ditunjuk pointer p, karena alamat memori yang ditunjuk ponter p merupakan alamat memori variabel x maka nilai dari variabel x juga ikut berubah, Untuk membuktikan nilai variabel x juga ikut berubah (menjadi 30) maka pada code dibawah nya kita akan menampilkan data dari variabel x dan pointer p. 
+
 #### Contoh penerapan pointers 
 ```
 #include <stdio.h>
