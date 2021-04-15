@@ -119,5 +119,47 @@ Pada program tersebut, kita menggunakan simbol & untuk mengambil alamat memori d
 
 ![image](https://user-images.githubusercontent.com/82454139/114793841-74d9bc00-9db5-11eb-98e5-8747c03a5622.png)
 
-Dapat dikatakan kalau pointer tidak berisi nilai data, melainkan berisi suatu alamat memori. Lokasi memori tersebut bisa diwakili sebuah variabel atau juga berupa alamat memori secara langsung.
+## Pointer Dan Array
+jika menuliskan sebuah array tanpa tanda kurung kotak ([]) maupun indeksnya, maka array tersebut menunjuk atau bersi alamat elem pertama dari array tersebut. Misalkan kamu membuat sebuah pointer bertipe int dengan nama pointerArray dan sebuah array dengan tipe yang sama yaitu int dengan nama nilaiArray,
+*CONTOH 
+```
+#include <iostream>
+using namespace std;
+ 
+int main(){
+int nilaiArray[5] = {2,5,4,6,7};
+int *pointerArray;
+pointerArray = nilaiArray;
+cout<<"Nilai pada elemen 0 nilaiArray adalah = "<<nilaiArray[0]<<endl;
+cout<<"Nilai pada elemen 0 nilaiArray (Pointer) adalah = "<<*pointerArray<<endl;
+pointerArray++; // naikan alamat yang ditunjuk pointer sejauh 1 integer
+*pointerArray = 10; //Ubah nilai elemen 1 array (nilaiArray) menjadi 10
+cout<<"Nilai pada elemen 1 nilaiArray adalah = "<<nilaiArray[1]<<endl;
+cout<<"Nilai pada elemen 1 nilaiArray (Pointer) adalah = "<<*pointerArray<<endl;
+pointerArray = nilaiArray; //kembalikan pointer pada elemen pertama
+cout<<endl;
+cout<<"Akses nilai semua array dengan pointer dan looping for"<<endl;
+for (int i=0; i<5; i++){
+ cout<<"Nilai indeks ["<<i<<"] adalah = "<<*(pointerArray+i)<<endl;
+}
+return 0;
+}
+```
+*OUTPUT
+```
+Nilai pada elemen 0 nilaiArray adalah = 2
+Nilai pada elemen 0 nilaiArray (Pointer) adalah = 2
+Nilai pada elemen 1 nilaiArray adalah = 10
+Nilai pada elemen 1 nilaiArray (Pointer) adalah = 10
+
+Akses nilai semua array dengan pointer dan looping for,
+Nilai index [0] adalah = 2
+Nilai index [1] adalah = 10
+Nilai index [2] adalah = 4
+Nilai index [3] adalah = 6
+Nilai index [4] adalah = 7
+```
+Dari data,Suatu pointer bertipe int hanya dapat digunakan untuk menunjuk pada variabel int. Sebab, tipe data tersebut akan menentukan sifat pointer ketika alamat pointer tersebut dilakukan increment. Begitu juga untuk tipe data yang lain.
+
+##### Dapat dikatakan kalau pointer tidak berisi nilai data, melainkan berisi suatu alamat memori. Lokasi memori tersebut bisa diwakili sebuah variabel atau juga berupa alamat memori secara langsung.
 
