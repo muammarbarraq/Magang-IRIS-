@@ -36,7 +36,7 @@ int main(){
      return 0;
 }
 ```
-*OUTPUT
+* OUTPUT
 ```
 Nilai (isi) dari variabel angka : 90
 Alamat variabel angka (&angka) : 0x6ffe34
@@ -82,7 +82,7 @@ int main(){
      return 0;
 }
 ```
-*OUTPUT
+* OUTPUT
 ```
 Nilai X   : 20 
 Alamat X (&X) : 06ffe3c  
@@ -115,9 +115,13 @@ void main () {
 ```
 
 Pada program tersebut, kita menggunakan simbol & untuk mengambil alamat memori dari variabel a dan b. Lalu menggunakan format specifier %x untuk menampilkannya dalam bilangan heksadesimal.
+
 * OUTPUTNYA :
 
 ![image](https://user-images.githubusercontent.com/82454139/114793841-74d9bc00-9db5-11eb-98e5-8747c03a5622.png)
+
+##### Dapat dikatakan kalau pointer tidak berisi nilai data, melainkan berisi suatu alamat memori. Lokasi memori tersebut bisa diwakili sebuah variabel atau juga berupa alamat memori secara langsung.
+
 
 ## Pointer Dan Array
 jika menuliskan sebuah array tanpa tanda kurung kotak ([]) maupun indeksnya, maka array tersebut menunjuk atau bersi alamat elem pertama dari array tersebut. Misalkan kamu membuat sebuah pointer bertipe int dengan nama pointerArray dan sebuah array dengan tipe yang sama yaitu int dengan nama nilaiArray,
@@ -145,7 +149,7 @@ for (int i=0; i<5; i++){
 return 0;
 }
 ```
-*OUTPUT
+* OUTPUT
 ```
 Nilai pada elemen 0 nilaiArray adalah = 2
 Nilai pada elemen 0 nilaiArray (Pointer) adalah = 2
@@ -161,5 +165,39 @@ Nilai index [4] adalah = 7
 ```
 Dari data,Suatu pointer bertipe int hanya dapat digunakan untuk menunjuk pada variabel int. Sebab, tipe data tersebut akan menentukan sifat pointer ketika alamat pointer tersebut dilakukan increment. Begitu juga untuk tipe data yang lain.
 
-##### Dapat dikatakan kalau pointer tidak berisi nilai data, melainkan berisi suatu alamat memori. Lokasi memori tersebut bisa diwakili sebuah variabel atau juga berupa alamat memori secara langsung.
+## Pointer Dan Fungsi
+Seperti halnya dengan array, pointer dapat digunakan sebagai parameter suatu fungsi. Karena sifat pointer yang hanya sebagai penunjuk, maka setiap perubahan yang terjadi pada parameter, sebenarnya terjadi pada variabel yang ditunjuk bukan pada variabel pointer. Berikut adalah contoh program sederhananya:
+```
+#include <iostream>
+using namespace std;
+ 
+void tambah(int *angka){
+*angka +=20;
+}
+ 
+int main(){
+int nilai = 10;
+cout<<"Nilai variabel nilai adalah = "<<nilai<<endl;
+tambah(&nilai); //Memasukkan alamat variabel nilai pada fungsi tambah
+cout<<"Nilai variabel nilai adalah = "<<nilai<<endl;
+return 0;
+}
+```
+* OUTPUT
+```
+Nilai variabel nilai adalah = 10
+Nilai variabel nilai adalah = 30
+```
+Pada program diatas, disitu dibuat fungsi tambah, dimana ketika alamat suatu variabel diberikan sebagai parameter fungsi, nilai 20 akan ditambahkan pada alamat tersebut. Perbedaan parameter berupa pointer dan non-pointer adalah, pada variabel non-pointer, ketika ingin memasukkan nilai pada sebuah variabel kedalam parameter, harus memasukkan nilai dari variabel tersebut. Untuk parameter berupa pointer, cukup memasukkan alamat variabel yang menampung nilai dengan operator (&) kedalam parameter fungsi.
+Yang menarik adalah pada fungsi tambah di atas, walaupun fungsi tersebut merupakan fungsi void tanpa nilai kembalian alias return, namun nilai variabel parameter berubah.
 
+
+#### BERIKUT BEBERAPA REFENSI YANG BISA DIJADIKAN MODUL UNTUK BELAJAR 
+* https://www.cplusplus.com/doc/tutorial/pointers/
+* https://www.petanikode.com/c-pointer/
+* https://bundet.com/d/995-pengertian-pointer-dalam-c
+* https://github.com/AlproITS/DasarPemrograman/wiki/Modul-4:-Pointer-dan-Struct#deklarasi-variabel-pointer
+* https://www.programiz.com/c-programming/c-pointers
+* https://www.sinauarduino.com/artikel/pointer-pada-pemrograman-cpp/
+
+##### ===========================================================SEKIAN,TERIMA KASIH=============================================================================================
