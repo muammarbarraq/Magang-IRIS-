@@ -199,5 +199,6 @@ Yang menarik adalah pada fungsi tambah di atas, walaupun fungsi tersebut merupak
 * https://github.com/AlproITS/DasarPemrograman/wiki/Modul-4:-Pointer-dan-Struct#deklarasi-variabel-pointer
 * https://www.programiz.com/c-programming/c-pointers
 * https://www.sinauarduino.com/artikel/pointer-pada-pemrograman-cpp/
+* https://youtu.be/O1kWNj5Ikro
 
 ##### ======================SEKIAN,TERIMA KASIH============================
