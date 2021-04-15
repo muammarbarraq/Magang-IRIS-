@@ -200,4 +200,4 @@ Yang menarik adalah pada fungsi tambah di atas, walaupun fungsi tersebut merupak
 * https://www.programiz.com/c-programming/c-pointers
 * https://www.sinauarduino.com/artikel/pointer-pada-pemrograman-cpp/
 
-##### ======================SEKIAN,TERIMA KASIh===================
+##### ======================SEKIAN,TERIMA KASIH============================
